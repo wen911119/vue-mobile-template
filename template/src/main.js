@@ -4,6 +4,10 @@
 {{/if_eq}}
 import Vue from 'vue'
 import App from './App'
+import store from './store'
+if (window.__INITIAL_STATE__) {
+    store.replaceState(window.__INITIAL_STATE__)
+}
 {{#router}}
 import router from './router'
 {{/router}}
@@ -13,6 +17,7 @@ Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store,
   {{#router}}
   router,
   {{/router}}
