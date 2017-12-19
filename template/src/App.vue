@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     {{#router}}
     <router-view/>
     {{else}}
@@ -11,23 +10,40 @@
 
 <script>
 {{#unless router}}
-import HelloWorld from './components/HelloWorld'
+import demo from './modules/Demo/pages/demo1/app.vue'
 
 {{/unless}}
 export default {
   name: 'app'{{#router}}{{else}},
   components: {
-    HelloWorld
+    demo
   }{{/router}}
 }
 </script>
 
 <style lang="scss">
-#app {
-  height: 100%;
-}
 @font-face {
     font-family: 'iconfont';
     src:url('./assets/iconfont.ttf') format('truetype')
+}
+html,body{
+  margin: 0;
+  padding: 0;
+}
+#app {
+  height: 100%;
+}
+ul,li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+  
+i{
+  font-style: normal;
+}
+  
+*{
+  box-sizing: border-box;
 }
 </style>

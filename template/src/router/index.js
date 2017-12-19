@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 const demo1 = ()=>import('@/modules/Demo/pages/demo1/app.vue')
 const demo2 = ()=>import('@/modules/Demo/pages/demo2/app.vue')
 
