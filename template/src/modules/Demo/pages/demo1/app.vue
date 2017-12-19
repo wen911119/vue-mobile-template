@@ -2,7 +2,7 @@
     <div class="login-page">
         demo1
         <i class="iconfont">&#xe609;</i>
-        <span>{{count}}</span>
+        <span>\{{count}}</span>
         <input type="number" v-model="num"/>
         <button @click="add">加</button>
     </div>
@@ -25,7 +25,7 @@
                 this.compute(this.num)
             },
             ...mapActions({
-                compute:"demo.compute"
+                compute:"demo/add"
             })
         }
     }
