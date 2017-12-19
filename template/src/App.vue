@@ -22,6 +22,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import './style/common.scss';
 @font-face {
     font-family: 'iconfont';
     src:url('./assets/iconfont.ttf') format('truetype')
