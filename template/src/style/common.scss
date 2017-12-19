@@ -11,6 +11,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+//=== 常用icon ===//
 .icon-right{
     @extend .iconfont;
     &:after{
@@ -39,34 +40,45 @@
 }
 
 
-// 分割线
+//===== 分割线 =====//
 hr{
     border: 0;
     border-top: 1px solid $bd-color;
     margin: 0;
 }
-// border
-.bd{
+
+//===== 边框 =====//
+.bd-1{
     border:1px solid $bd-color;
 }
-// 上border
-.bd-1{
+// 上
+.bd-1-0-0-0{
     border: 0;
     border-top: 1px solid $bd-color;
 }
-// 下border
-.bd-0-0-1{
+// 下
+.bd-0-0-1-0{
     border: 0;
     border-bottom: 1px solid $bd-color;
 }
+// 左
+.bd-0-0-0-1{
+    border: 0;
+    border-left: 1px solid $bd-color;
+}
+// 右
+.bd-0-1-0-0{
+    border: 0;
+    border-right: 1px solid $bd-color;
+}
 // 上下border
-.bd-1-0-1{
+.bd-1-0-1-0{
     border: 0;
     border-top: 1px solid $bd-color;
     border-bottom: 1px solid $bd-color;
 }
 
-// 圆角
+//===== 圆角 =====//
 .bdr-100{
     border-radius: 100%;
 }
@@ -98,10 +110,10 @@ hr{
     border-radius: pxToRem(18px);
 }
 .bdr-20{
-    border-radius: pxToRem(2px);
+    border-radius: pxToRem(20px);
 }
 
-// 文本
+//===== 文本 =====//
 .text{
     color: $primary-text-color;
 }
@@ -136,9 +148,14 @@ hr{
 .text20{
     font-size: pxToRem(20px);
 }
+// 文字超出...
+.ell{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 
-
-padding
+//===== padding =======//
 .pd-20{
     padding: pxToRem(20px);
 }
@@ -165,7 +182,7 @@ padding
 }
 
 
-// flex
+//====== flex =======//
 .flex{
     display: flex;
 }
@@ -196,22 +213,22 @@ padding
     align-items: center;
 }
 
-// 布局
-.v-c>*{
-    vertical-align: middle;
-    display: inline-block;
-}
-
-.v-c::after{
-    content:"";
-    display: inline-block;
-    width: 0;
-    height: 100%;
-    vertical-align: middle;
-}
-
 .h-c{
     text-align: center;
+}
+
+
+//===== 前缀后缀 =====//
+.CNY:before{
+    content: "¥";
+}
+
+.USD:before{
+    content: "$";
+}
+
+.percent:after{
+    content: "%";
 }
 
 // 杂项
@@ -225,11 +242,12 @@ padding
     color: $placeholder-color;
 }
 
-// 文字超出...
-.ell{
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+.bg-w{
+    background-color:#fff;
 }
+
+
+
+
 
 
