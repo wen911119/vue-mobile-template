@@ -1,22 +1,37 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-const demo1 = ()=>import('@/modules/Demo/pages/demo1/app.vue')
-const demo2 = ()=>import('@/modules/Demo/pages/demo2/app.vue')
-
+const demoList = () => import('@/modules/Demo/pages/demo-list/app.vue')
+const vuexDemo = () => import('@/modules/Demo/pages/vuex-demo/app.vue')
+const iconfontDemo = () => import('@/modules/Demo/pages/iconfont-demo/app.vue')
+{{#i18n}}
+const i18nDemo = () => import('@/modules/Demo/pages/i18n-demo/app.vue')
+{{/i18n}}
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/demo1',
-      name: 'demo1',
-      component: demo1
-    },
-    {
-        path: '/demo2',
-        name: 'demo2',
-        component: demo2
-      },
-    { path: '*', redirect: '/demo1' }
-  ]
+    routes: [
+        {
+            path: '/demo',
+            name: 'demo-list',
+            component: demoList
+        },
+        {
+            path: '/demo/vuex',
+            name: 'vuex',
+            component: vuexDemo
+        },
+        {
+            path: '/demo/iconfont',
+            name: 'iconfont',
+            component: iconfontDemo
+        },
+        {{#i18n}}
+        {
+            path: '/demo/i18n',
+            name: 'i18n',
+            component: i18nDemo
+        },
+        {{/i18n}}
+        { path: '*', redirect: '/demo' }
+    ]
 })

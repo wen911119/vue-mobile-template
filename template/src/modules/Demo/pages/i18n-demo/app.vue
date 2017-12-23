@@ -1,6 +1,7 @@
 <template>
     <div class="login-page">
-        demo2
+        i18n-demo
+        <h2>{{$t('hello')}}</h2>
     </div>
 </template>
 <script>

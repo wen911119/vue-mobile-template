@@ -1,7 +1,6 @@
 <template>
     <div class="login-page">
-        demo1
-        <i class="iconfont">&#xe609;</i>
+        vuex-demo
         <span>\{{count}}</span>
         <input type="number" v-model="num"/>
         <button @click="add">加</button>
