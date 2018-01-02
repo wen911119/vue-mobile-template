@@ -1,11 +1,8 @@
-export function LOADING(options = { delay: 500, text: '' }) {
-    return {
-        start: () => {
-
-        },
-        end: () => {
-
-        }
+export function LOADING(action, options = { delay: 500, text: '' }) {
+    if (action === 'hide') {
+        console.log('loading-hide')
+    } else if (action === 'show') {
+        console.log('loading-show')
     }
 }
 
