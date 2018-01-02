@@ -1,12 +1,12 @@
-export function getData(){
+export function GETDATA(){
 
 }
 
-export function setData(){
+export function SETDATA(){
 
 }
 
 export default {
-    getData,
-    setData
+    GETDATA,
+    SETDATA
 }
