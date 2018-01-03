@@ -1,3 +1,4 @@
+#### 需要gitlab-runner 以特权模式运行 ####
 stages:
   - npm-build
   - docker-build
