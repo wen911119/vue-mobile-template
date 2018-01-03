@@ -2,6 +2,9 @@
 stages:
   - npm-build
   - docker-build
+cache: 
+  paths:
+  - dist/
 before_script:
   - dockerservice=registry.cn-shanghai.aliyuncs.com/ruiyun2015/vue-mobile-demo:`TZ=CST-8 date '+%Y%m%d-%H%M'`
   - hostname -i
@@ -12,7 +15,8 @@ build_package:
   image: registry.docker-cn.com/library/node:alpine 
   script: 
   - echo $image
-  - npm install --registry=https://registry.npm.taobao.org
+  - npm install -g cnpm --registry=https://registry.npm.taobao.org
+  - cnpm install
   - npm run build
 build_images:
    stage: docker-build
@@ -23,13 +27,9 @@ build_images:
    - name: registry.docker-cn.com/library/docker:dind
      # 需要设置别名,等于 --link 的别名
      alias: docker
-   cache: 
-     # 从[npm-build]的state 切换到 [docker-build]的state时, 上一步build 出来的dist目录默认会被删除清空
-     # 所以要加这个项 保证这个目录被缓存
-     paths:
-     - dist/
    script:
     - echo $image
+    - ls
     - echo "Build Docker Image..."
     - docker build --no-cache -t $dockerservice .
     - echo "Push Image:" $dockerservice " to repository..."
