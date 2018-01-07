@@ -32,6 +32,7 @@ build_images:
     - ls
     - echo "Build Docker Image..."
     - docker build --no-cache -t $dockerservice .
+    - docker login -u=771299231@qq.com -p registry@ruiyun registry.cn-shanghai.aliyuncs.com
     - echo "Push Image:" $dockerservice " to repository..."
     - docker push $dockerservice
    only:
