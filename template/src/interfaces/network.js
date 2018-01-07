@@ -7,7 +7,7 @@ export function GET() {
 
 }
 
-export function POST(url, params, loading = true) {
+export function POST(url, params = {}, loading = true) {
 
     if (isWeb()) {
         url = base_url + url
