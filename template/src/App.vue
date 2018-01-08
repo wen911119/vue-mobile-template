@@ -63,35 +63,40 @@ i{
 }
 
 .app-page {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: 10;
-    left: 0;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-}
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 10;
+        left: 0;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        background-color: #fff;
+    }
 
-.slide-left-enter-active,
-.slide-left-leave-active,
-.slide-right-enter-active,
-.slide-right-leave-active {
-    transition: all .5s
-}
+    .slide-left-enter-active,
+    .slide-right-enter-active {
+        transition: left .5s;
+        z-index: 12;
+    }
+    .slide-left-leave-active,
+    .slide-right-leave-active{
+        z-index: 9;
+        transition: left .5s;
+    }
 
-.slide-left-leave {
-    left: -10rem;
-}
+    .slide-left-leave {
+        left: 0rem;
+    }
 
-.slide-left-enter {
-    left: 10rem;
-}
+    .slide-left-enter {
+        left: 10rem;
+    }
 
-.slide-right-leave {
-    left: 10rem;
-}
+    .slide-right-leave {
+        left: 0rem;
+    }
 
-.slide-right-enter {
-    left: -10rem;
-}
+    .slide-right-enter {
+        left: -10rem;
+    }
 </style>
