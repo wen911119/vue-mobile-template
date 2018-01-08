@@ -1,5 +1,5 @@
 <template>
-    <div class="login-page">
+    <div class="app-page">
         vuex-demo
         <span>\{{count}}</span>
         <input type="number" v-model="num"/>

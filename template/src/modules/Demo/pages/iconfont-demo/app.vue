@@ -1,5 +1,5 @@
 <template>
-    <div class="login-page">
+    <div class="app-page">
         <i class="iconfont">&#xe609;</i>
     </div>
 </template>
