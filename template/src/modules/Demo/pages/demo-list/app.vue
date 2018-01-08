@@ -10,7 +10,7 @@
             </li>
             {{#i18n}}
             <li>
-                <router-link to="/demo/i18n">i18n demo</router-link>
+                <router-link to="/demo/i18n" class="text36">i18n demo</router-link>
             </li>
             {{/i18n}}
         </ul>

@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     {{#router}}
-    <router-view/>
+    <transition :name="transitionName">
+        <router-view/>
+    </transition>
     {{else}}
     <HelloWorld/>
     {{/router}}
