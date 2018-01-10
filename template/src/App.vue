@@ -19,14 +19,16 @@ export default {
   name: 'app',{{#router}} 
   data() {
         return {
-            transitionName: 'slide-left'
+            transitionName: ''
         }
     },
     watch: {
         '$route'(to, from) {
-            const toDepth = to.path.split('/').length
-            const fromDepth = from.path.split('/').length
-            this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+            if(from.name){
+                const toDepth = to.path.split('/').length
+                const fromDepth = from.path.split('/').length
+                this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+            }
         }
     } {{else}}
   components: {
